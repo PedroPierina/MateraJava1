@@ -1,6 +1,6 @@
 package Imoveis;
 
-public class Novo extends Imovel{
+public class Novo extends Imovel {
 	
 	public Novo(String endereco, double preco){
 		super(endereco, preco);
