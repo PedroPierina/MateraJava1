@@ -1,2 +1,2 @@
 # MateraJava1
-Primeira atividade de Java 
+Atividade para estudo de Java
