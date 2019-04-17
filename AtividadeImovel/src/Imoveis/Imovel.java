@@ -1,6 +1,9 @@
 package Imoveis;
 
-public class Imovel {
+import java.text.DecimalFormat;
+import java.util.Comparator;
+
+public class Imovel implements Comparable<Imovel>{
 	private String endereco;
 	private double preco;
 
@@ -27,7 +30,8 @@ public class Imovel {
 
 	@Override
 	public String toString() {
-		return "endereco=" + endereco + ", preco=" + preco;
+		DecimalFormat numberFormat = new DecimalFormat("#.00");
+		return "endereco=" + endereco + ", preco=" + numberFormat.format(getPreco()) + "\n";
 	}
 
 	@Override
@@ -36,8 +40,22 @@ public class Imovel {
 		return this.endereco.equals(imovel.getEndereco());
 	}
 	
+	@Override
 	public int hashCode(){
 		return getEndereco().length()*5;
+	}
+	
+	public int compareTo(Imovel other){
+		if(this.preco < other.preco){
+			return -1;
+		}else{
+			if(this.preco > other.preco){
+				return 1;
+			}else{
+				return 0;
+			}
+		}
+		
 	}
 
 }
