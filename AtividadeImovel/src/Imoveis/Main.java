@@ -79,6 +79,7 @@ public class Main {
 		imoveisList.add(imovel8);
 		imoveisList.add(imovel9);
 		imoveisList.add(imovel10);
+		
 		Collections.sort(imoveisList);
 		System.out.println(imoveisList);
 	}

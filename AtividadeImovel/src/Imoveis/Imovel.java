@@ -27,6 +27,15 @@ public class Imovel implements Comparable<Imovel>{
 	public void setPreco(double preco) {
 		this.preco = preco;
 	}
+	
+	public String verificaStringNull(String valor){
+		if(valor == null){
+			throw new ValorNullOuValorNegativoException("String nula, insira nova String");
+		}else{
+			this.setEndereco(valor);
+			return this.getEndereco();
+		}
+	}
 
 	@Override
 	public String toString() {

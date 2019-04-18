@@ -17,12 +17,5 @@ public class Novo extends Imovel {
 		}
 	}
 	
-	private String verificaStringNull(String valor){
-		if(valor == null){
-			throw new ValorNullOuValorNegativoException("String nula, insira nova String");
-		}else{
-			this.setEndereco(valor);
-			return this.getEndereco();
-		}
-	}
+	
 }
